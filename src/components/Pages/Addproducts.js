@@ -1,5 +1,5 @@
 import { useState } from "react";
-//import axios from "axios";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
 function Addproducts() {
     const [title, settitle] = useState("");
@@ -10,28 +10,28 @@ function Addproducts() {
     const formsubmit = (e) => {
         e.preventDefault();
         //axios==fetch 
-        /* axios.post("http://localhost:9000/posts", {
-             title,
-             price,
-         })
-             .then((data) => {
-                 console.log(data);
-                 navigate('/products');
-             })*/
-        fetch("http://localhost:9000/posts", {
-            method: "POST",
-            headers: {
-                "Content-Type": "Application/json",
-            },
-            body: JSON.stringify({
-                title,
-                price,
-            }),
-        }).then((res) => res.json())
+        axios.post("http://localhost:9000/posts", {
+            title,
+            price,
+        })
             .then((data) => {
                 console.log(data);
                 navigate('/products');
             })
+        /* fetch("http://localhost:9000/posts", {
+             method: "POST",
+             headers: {
+                 "Content-Type": "Application/json",
+             },
+             body: JSON.stringify({
+                 title,
+                 price,
+             }),
+         }).then((res) => res.json())
+             .then((data) => {
+                 console.log(data);
+                 navigate('/products');
+             })*/
     }
     return (
         <>

@@ -58,7 +58,7 @@ function Products() {
                                     <td>
                                         <button className="btn btn-danger btn-sm" onClick={() => deleteproduct(product)}>Delete</button>
                                         <Link to={`/products/${product.id}`} className="btn btn-info btn-sm">View</Link>
-                                        <button className="btn btn-primary btn-sm">Edit</button>
+                                        <Link to={`/products/edit/${product.id}`} className="btn btn-primary btn-sm">Edit</Link>
                                     </td>
                                 </tr>
 
