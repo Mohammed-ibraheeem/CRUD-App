@@ -10,7 +10,7 @@ function Addproducts() {
     const formsubmit = (e) => {
         e.preventDefault();
         //axios==fetch 
-        axios.post("http://localhost:9000/posts", {
+        axios.post("https://test-api-ln2g.onrender.com/product", {
             title,
             price,
         })
@@ -18,7 +18,7 @@ function Addproducts() {
                 console.log(data);
                 navigate('/products');
             })
-        /* fetch("http://localhost:9000/posts", {
+        /* fetch("https://test-api-ln2g.onrender.com/product", {
              method: "POST",
              headers: {
                  "Content-Type": "Application/json",

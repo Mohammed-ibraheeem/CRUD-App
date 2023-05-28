@@ -6,7 +6,7 @@ function ProductDetails() {
     const [Product, setProduct] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:9000/posts/${productID}`)
+        fetch(`https://test-api-ln2g.onrender.com/product/${productID}`)
             .then((res) => res.json())
             .then((Product) => {
                 console.log(Product);

@@ -8,7 +8,7 @@ function Products() {
         GetAllProducts();
     }, [])
     const GetAllProducts = () => {
-        fetch('http://localhost:9000/posts')
+        fetch('https://test-api-ln2g.onrender.com/product')
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);
@@ -22,7 +22,7 @@ function Products() {
             showCancelButton: true
         }).then((data) => {
             if (data.isConfirmed) {
-                fetch(`http://localhost:9000/posts/${product.id}`, {
+                fetch(`https://test-api-ln2g.onrender.com/product/${product.id}`, {
                     method: "DELETE"
                 })
                     .then((res) => res.json())
