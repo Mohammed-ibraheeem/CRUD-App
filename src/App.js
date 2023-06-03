@@ -17,8 +17,8 @@ function App() {
         </div>
         <div className='col-10'>
           <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/products' element={<Products />} />
+            <Route path='' element={<Home />} />
+            <Route path='/CRUD-App' element={<Products />} />
             <Route path='/products/add' element={<Addproducts />} />
             <Route path='/products/:productID' element={<ProductDetails />} />
             <Route path='/products/edit/:productID' element={<EditProduct />} />

@@ -4,7 +4,7 @@ function Sidebar() {
         <>
             <ul className="list-unstyled">
                 <li>
-                    <Link to="/products">Get All Products</Link>
+                    <Link to="/CRUD-App">Get All Products</Link>
                 </li>
 
             </ul>
